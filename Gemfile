@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'mobylette'
+
 gem 'jquery-rails'
 gem 'jquery_mobile_rails'
 
@@ -14,6 +15,11 @@ end
 
 group :development do
   gem 'sqlite3'
+end
+
+group :development, :test do
+  gem 'rspec'
+  gem 'factory_girl'
 end
 
 # Gems used only for assets and not required
