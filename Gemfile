@@ -19,8 +19,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec'
-  gem 'factory_girl'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
 end
 
 # Gems used only for assets and not required
