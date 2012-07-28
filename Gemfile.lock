@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/josevalim/active_model_serializers.git
+  revision: 21817bc7956b547bb8388ffc87443b4b6f967385
+  specs:
+    active_model_serializers (0.5.0)
+      activemodel (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -119,6 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   factory_girl
   jquery-rails
   jquery_mobile_rails

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'mobylette'
+gem 'active_model_serializers', git: 'git://github.com/josevalim/active_model_serializers.git'
 
 gem 'jquery-rails'
 gem 'jquery_mobile_rails'
