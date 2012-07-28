@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20120728215148) do
     t.text     "title"
     t.text     "overview"
     t.text     "full"
+    t.text     "slug"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
