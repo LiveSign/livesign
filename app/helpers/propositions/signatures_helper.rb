@@ -1,0 +1,2 @@
+module Propositions::SignaturesHelper
+end

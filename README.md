@@ -14,6 +14,7 @@ Priorities
 
 2) User information (sign up info)
 - email address
+- phone number
 - street address
 - city
 - state
@@ -49,3 +50,11 @@ Priorities
 
 8) Petition Export:
 - Export signatures as PDF documents
+
+References
+=========
+
+* http://ballotpedia.org/wiki/index.php/Signature_requirements
+* http://thomasjbradley.ca/lab/signature-pad/
+* http://tokbox.com
+* http://twilio.com
