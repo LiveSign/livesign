@@ -22,13 +22,13 @@ Priorities
 - accept TOS
 
 3) Signature
-- HTML5 canvas
+- HTML5 canvas (http://thomasjbradley.ca/lab/signature-pad/)
 - erase signature
 - save signature
 - export image
 
 4) Video
-- video recording (tokbox)
+- video recording (http://tokbox.com)
 - count down
 - video timer
 - text prompt
@@ -36,7 +36,7 @@ Priorities
 
 5) Sharing:
 - Facebook
-- Contact book => SMS Messages (twilio)
+- Contact book => SMS Messages (http://twilio.com)
 
 6) Log In:
 - Email sent to authorize account
