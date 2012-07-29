@@ -11,14 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120729001607) do
+ActiveRecord::Schema.define(:version => 20120729140730) do
 
   create_table "propositions", :force => true do |t|
     t.text     "title"
     t.text     "overview"
     t.text     "full"
     t.text     "slug"
-    t.text     "state"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -27,9 +26,9 @@ ActiveRecord::Schema.define(:version => 20120729001607) do
   create_table "signatures", :force => true do |t|
     t.integer  "user_id"
     t.integer  "proposition_id"
-    t.text     "data"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "opentok_archive_id"
   end
 
   create_table "users", :force => true do |t|
