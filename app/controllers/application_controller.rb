@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   # Create a new OpenTok session via the OpenTok SDK client.
   # @return [String] An OpenTok session id
   def opentok_session
-    opentok.create_session(request.remote_addr)
+    opentok.create_session(request.remote_addr).to_s
   end
 
   # Generate a new token for an OpenTok session.
@@ -18,8 +18,10 @@ class ApplicationController < ActionController::Base
   # @option opts [String] :metadata A string of metadata to be stored with the OpenTok session
   # @return [String] An OpenTok authentication token
   def opentok_token(opts = {})
-    token_options = { session_id: opentok_session, role: OpenTok::RoleConstants::PUBLISHER }
-    options[:metadata] = opts[:metadata] if opts[:metadata]
+    token_options = { role: OpenTok::RoleConstants::PUBLISHER }
+    token_options[:session_id] = opts[:session_id] || opentok_session
+    token_options[:metadata] = opts[:metadata] if opts[:metadata]
+
     opentok.generate_token(token_options)
   end
 
