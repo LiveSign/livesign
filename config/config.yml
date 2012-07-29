@@ -2,3 +2,8 @@ production:
   opentok:
     api_key: <%= ENV['OPENTOK_API_KEY'] %>
     api_secret: <%= ENV['OPENTOK_API_SECRET'] %>
+
+development:
+  opentok:
+    api_key: <%= ENV['OPENTOK_API_KEY'] %>
+    api_secret: <%= ENV['OPENTOK_API_SECRET'] %>
