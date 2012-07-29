@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120728215148) do
+ActiveRecord::Schema.define(:version => 20120729001607) do
 
   create_table "propositions", :force => true do |t|
     t.text     "title"
@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(:version => 20120728215148) do
     t.string   "state"
     t.string   "name"
     t.string   "zip_code"
-    t.string   "tos_acceptance"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.boolean  "tos_acceptance"
   end
 
 end
