@@ -3,12 +3,13 @@
   <%= f.text_field :email_address, :placeholder => "Email", :class => "email_address_field" %>
   <%= f.text_field :street_address, :placeholder => "Street Address", :class => "street_address_field" %>
   <%= f.text_field :city, :placeholder => "City", :class => "city_field" %>
+  <%= f.select :state, State::NAMES, :class => "state_field" %>
   <%= f.text_field :zip_code, :placeholder => "Zipcode", :class => "zipcode_field" %>
   <%= f.text_field :phone, :placeholder => "Phone", :class => "phone_field" %>
   <div class="tos_agreement_container">
     <%= f.check_box :tos_acceptance %> I accept the <%= link_to "signature terms", terms_of_service_path %>
   </div>
   <div class="next_button_container">
-    <%= submit_tag "Next", :class => "next_button" %>
+    <%= button_tag "Next", :type => 'submit', :class => "next_button" %>
   </div>
 <% end %>

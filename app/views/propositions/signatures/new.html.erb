@@ -7,26 +7,22 @@
     $(document).ready(function() {
       var options = {
         drawOnly: true,
-        defaultAction: 'drawIt'
+        defaultAction: 'drawIt',
+        validateFields: false,
+        output: '.data'
       };
       $('.sigPad').signaturePad(options);
     });
   </script>
+
 <% end %>
 
-<%= form_for :signature, :url => proposition_signatures_path(@proposition.slug), :html => {:class => 'sigPad'} do |f| %>
-
-  <label for="name">Print your name</label>
-  <input type="text" name="name" id="name" class="name">
+<%= form_for :signature, :url => proposition_signatures_path(@proposition.slug, :user_id => @user.id), :html => {:class => 'sigPad'} do |f| %>
   <p class="drawItDesc">Draw your signature</p>
-  <ul class="sigNav">
-    <li class="clearButton"><a href="#clear">Clear</a></li>
-  </ul>
+  <div class="clearButton"><a href="#clear">Clear</a></div>
   <div class="sig sigWrapper">
-    <div class="typed"></div>
     <canvas class="pad" width="198" height="55"></canvas>
-    <input type="hidden" name="output" class="output">
+    <input type="hidden" name="data" class="data">
   </div>
   <button type="submit">Next</button>
-
 <% end %>

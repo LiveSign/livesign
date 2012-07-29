@@ -14,7 +14,8 @@
   <% unless @client_config.blank? || @client_config.empty? %>
     <script>window.config = <%= @client_config.to_json.html_safe %></script>
   <% end %>
-  <%= javascript_include_tag "application" %>
+
+  <%#= javascript_include_tag "application" %>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
@@ -24,7 +25,15 @@
 </head>
 <body>
 
-<%= yield %>
+  <% if flash[:error] %>
+    <div class="error">
+      <%= flash[:error].html_safe %>
+    </div>
+  <% end %>
+
+  <div class="main_content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

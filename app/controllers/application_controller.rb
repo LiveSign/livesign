@@ -22,4 +22,9 @@ class ApplicationController < ActionController::Base
     options[:metadata] = opts[:metadata] if opts[:metadata]
     opentok.generate_token(token_options)
   end
+
+  def errors_to_string(errors)
+    errors.full_messages.join('.&nbsp;')
+  end
+
 end

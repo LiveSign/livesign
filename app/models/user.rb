@@ -7,8 +7,13 @@
 # t.string   "zip_code"
 # t.string   "tos_acceptance"
 class User < ActiveRecord::Base
-  
+
   has_many :signatures
-  
-  validate :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance, presence: true
+
+  validates :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance, presence: true
+
+  validates_uniqueness_of :email_address
+
+  attr_accessible :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance
+
 end

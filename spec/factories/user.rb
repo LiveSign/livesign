@@ -6,7 +6,7 @@ FactoryGirl.define do
     phone { Faker::PhoneNumber.phone_number }
     street_address { Faker::Address.street_address }
     city { Faker::Address.city }
-    state { Faker::AddressUS.state }
+    state 'CA'
     zip_code { Faker::AddressUS.zip_code }
     tos_acceptance true
   end
