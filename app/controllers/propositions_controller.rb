@@ -7,7 +7,7 @@ class PropositionsController < ApplicationController
   end
 
   def show
-    # show.html.haml
+    @proposition = Proposition.find_by_slug(params[:id]) || Proposition.find(params[:id])
   end
 
 private
