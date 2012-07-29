@@ -2,7 +2,6 @@
 <%= form.text_field :email_address, :placeholder => "Email", :class => "email_address_field input_text" %>
 <%= form.text_field :street_address, :placeholder => "Street Address", :class => "street_address_field input_text" %>
 <%= form.text_field :city, :placeholder => "City", :class => "city_field input_text" %>
-<%= form.select :state, State::NAMES, {:include_blank => true , :selected => @proposition.state}, {:class => "state_field", :style => "display:none;"} %>
 <%= form.text_field :zip_code, :placeholder => "Zipcode", :class => "zipcode_field input_text" %>
 <%= form.text_field :phone, :placeholder => "Phone", :class => "phone_field input_text" %>
 <div class="tos_container">
