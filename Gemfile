@@ -15,8 +15,6 @@ gem 'opentok'
 
 gem 'haml'
 
-gem 'debugger'
-
 gem 'will_paginate'
 
 group :production do
@@ -25,6 +23,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'debugger'
 end
 
 group :development, :test do
