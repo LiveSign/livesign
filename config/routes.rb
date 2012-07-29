@@ -6,7 +6,7 @@ LiveSign::Application.routes.draw do
     resources :videos, :only => [:new, :create]
   end
 
-  match '/terms_of_service' => 'pages#terms_of_service', :as => :terms_of_service
+  get '/terms_of_service' => 'pages#terms_of_service', :as => :terms_of_service
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
