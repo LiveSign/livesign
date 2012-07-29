@@ -1,0 +1,11 @@
+<% content_for(:head) do %>
+<%= javascript_include_tag(Rails.env.production? ? "http://static.opentok.com/v0.91/js/TB.min.js" : "http://staging.tokbox.com/v0.91/js/TB.min.js") %>
+<%= javascript_include_tag "propositions/videos" %>
+<% end %>
+
+<div id="recorder"></div>
+<div id="player"></div>
+
+<p id="video-controls">
+  <button id="record">Record</button> <button id="play">Play</button>
+</p>
