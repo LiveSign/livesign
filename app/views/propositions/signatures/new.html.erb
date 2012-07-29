@@ -18,7 +18,10 @@
 
 <% content_for :main_content do %>
 
-
+<div class="progressbar progressbar03-blue">
+    <div class="progressbar-inner">
+    </div>
+</div>
     <%= form_for :signature, :url => proposition_signatures_path(@proposition.slug, :user_id => @user.id), :html => {:class => 'sigPad form'} do |f| %>
 
       <div class="centered_container">

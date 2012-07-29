@@ -117,7 +117,7 @@ input, select {
   border-radius:4px;
   border:1px solid #D8DAD8;
   width:530px;
-  padding:10px;
+  padding:7px;
   height:34px;
   margin-bottom:15px;
 }
@@ -276,7 +276,7 @@ color:#808285;
 }
 
 .tos_container {
-  width:530px;
+  width:590px;
   text-align:left;
   margin:0px auto;
 }
@@ -405,6 +405,7 @@ color:#808285;
 
 .controls {
   margin-top:14px;
+  margin-bottom: 20px;
 }
 
 /* Signature Page */
@@ -479,4 +480,130 @@ color:#808285;
 
 .complete_button_container {
   padding-top:100px;
+}
+
+/*
+ * Chris's bars
+ */
+
+.progressbar{
+    
+    width:100%;
+    height:3px;
+    margin:0 auto 20px auto;
+    padding:0px;
+    
+    background:#E6E7E8;
+    border-width:1px;
+    border-style:solid;
+    border-color: #aaa #bbb #fff #bbb;    
+    box-shadow:inset 0px 2px 3px #bbb;    
+}
+
+.progressbar,
+.progressbar-inner{
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    -o-border-radius:4px;
+}
+
+.progressbar-inner{
+    width:77%; /* Change to actual percentage */
+    height:100%;
+    background:#999;
+    
+    background-size:18px 18px;
+    background-color: #ac0;   
+
+}
+
+/*
+ * Color Options
+ */
+
+.progressbar01-blue .progressbar-inner{
+    background-color:#2E87C8;
+    width:20%;
+    }
+
+.progressbar02-blue .progressbar-inner{
+    background-color:#2E87C8;
+    width:40%;
+    }
+
+.progressbar03-blue .progressbar-inner{
+    background-color:#2E87C8;
+    width:60%;
+    }
+
+.progressbar04-blue .progressbar-inner{
+    background-color:#2E87C8;
+    width:80%;
+    }
+
+.progressbar05-blue .progressbar-inner{
+    background-color:#2E87C8;
+    width:100%;
+    }
+​
+.progressbar-SIG{
+    width:324px;
+    height:16px;
+    background:red;
+}
+
+.progressbar-SIG .progressbar-inner{
+    background-color:#D7DF23;
+    width: 2%;
+}
+
+.chris_close{
+  padding-left: 2px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*signature 2.0*/
+
+.signaturebar{
+    
+    width:324px;
+    height:16px;
+    margin:0 36px 20px 0;
+    padding:0px;
+    position:relative; left:10px; top:15px;  
+    background:#E6E7E8;
+    border-width:1px;
+    border-style:solid;
+    border-color: #aaa #bbb #fff #bbb;    
+    box-shadow:inset 0px 2px 3px #bbb;    
+}
+
+.signaturebar,
+.signaturebar-inner{
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    -o-border-radius:4px;
+}
+
+.signaturebar-inner{
+    width:77%; /* Change to actual percentage */
+    height:100%;
+    background:#999;
+    
+    background-size:18px 18px;
+    background-color: #ac0;   
+
 }

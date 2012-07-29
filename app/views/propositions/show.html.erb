@@ -4,6 +4,11 @@
 <% end %>
 
 <% content_for :main_content do %>
+<div class="progressbar progressbar01-blue">
+    <div class="progressbar-inner">
+    </div>
+</div>
+
   <div class="prop_container">
 
     <div class="custom_scroll_bar wants_content retained">
@@ -38,14 +43,24 @@
     </div>
 
   </div>
+
+  
+
 <% end %>
+
+
 
 <% content_for :controls do %>
 
+
   <div class="button_container">
+    <div class="signaturebar">
+        <div class="signaturebar-inner">
+        </div>
+    </div>
     <a href="<%= new_proposition_user_path(@proposition.slug) %>" class="red_button button">
       Sign <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
     </a>
-  </div>
+
 
 <% end %>
