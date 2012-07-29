@@ -35,7 +35,7 @@ class Propositions::SignaturesController < Propositions::BaseController
   end
 
   def index
-    @proposition = Proposition.find_by_slug("tofu-sartorial-freegan-pitchfork-trust-fund")
+    @proposition = Proposition.find_by_slug(params[:proposition_id])
     @signatures = @proposition.signatures.includes(:user)
   end
 
