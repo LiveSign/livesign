@@ -12,8 +12,6 @@ class User < ActiveRecord::Base
 
   validates :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance, presence: true
 
-  validates_uniqueness_of :email_address
-
   attr_accessible :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance
 
 end

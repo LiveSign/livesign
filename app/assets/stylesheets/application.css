@@ -51,6 +51,11 @@
    margin-top:36px;
    background-color:white;
    border-radius:4px;
+   height:600px;
+   max-height:600px;
+   background-image: url('/assets/small_logo.png');
+   background-repeat: no-repeat;
+   background-position: 30px 530px;
  }
 
  .wrapper {
@@ -82,26 +87,96 @@ float_container {
 
 .title {
   color:#414042;
-  font-size:46pt;
+  font-size:46px;
   font-family:'LatoLightRegular';
+  word-wrap: break-word
 }
 
 .sub_title {
   color:#414042;
-  font-size:28pt;
+  font-size:28px;
   font-family:'LatoLightRegular';
+  word-wrap: break-word
 }
 
 .sub_content {
   color:#58595B;
-  font-size:18pt;
+  font-size:18px;
   font-family:'LatoLightRegular';
+  word-wrap: break-word
+}
+
+.centered_container {
+  text-align:center;
+}
+
+.form_container {
+}
+
+input, select {
+  border-radius:4px;
+  border:1px solid #D8DAD8;
+  width:530px;
+  padding:10px;
+  height:34px;
+  margin-bottom:15px;
+}
+
+.field_with_errors input {
+  border:1px solid #ED1C24;
+}
+
+.field_with_errors input::-webkit-input-placeholder {
+    color:    #ED1C24;
+}
+.field_with_errors input:-moz-placeholder {
+    color:    #ED1C24;
+}
+
+.input_text {
+  font-family: 'LatoLightRegular';
+  font-size: 24px;
+  color:#58595B;
+}
+
+input:onfocus {
+  border:#2E87C8;
+}
+
+input[type="checkbox"]{
+  /* Hide the input, but have it still be clickable */
+  opacity: 0;
+  float: left;
+  width: 18px;
+}
+
+.field_with_errors input[type="checkbox"] + span {
+  margin:0;
+}
+
+input[type="checkbox"] + span,
+.field_with_errors + span.checkbox_label {
+  margin: 0;
+  clear: none;
+  /* Left padding makes room for image */
+  padding: 29px 0 29px 50px;
+  /* Make look clickable because they are */
+  cursor: pointer;
+  background: url('/assets/radial_inactive.png') left center no-repeat;
+}
+
+input[type='checkbox']:checked + span,
+span.checkbox_label.checked {
+  background-image: url('/assets/radial_active.png');
+}
+
+.grey {
+color:#808285;
 }
 
 /* Proposition Styles */
 
 .prop_title {
-  padding-top:85px;
   padding-bottom:45px;
 }
 
@@ -118,8 +193,7 @@ float_container {
 
 .custom_scroll_bar {
   width: 850px;
-  height: 500px;
-  overflow: hidden;
+  height: 600px;
   position: relative;
 }
 
@@ -138,7 +212,7 @@ float_container {
 }
 
 .custom_scroll_bar .native {
-    height: 500px;
+    height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -147,6 +221,7 @@ float_container {
     width: 600%;
     padding-left:50px;
     padding-right:50px;
+    padding-top:50px;
 }
 
 .custom_scroll_bar .content {
@@ -184,13 +259,26 @@ float_container {
 }
 
 .view_demo_container {
-
+  text-align:left;
 }
 
 .contact_us {
   font-family:"LatoLightRegular";
   font-size:24px;
   margin-top:32px;
+}
+
+/* New user page */
+
+.user_title {
+  padding-top:50px;
+  padding-bottom:30px;
+}
+
+.tos_container {
+  width:530px;
+  text-align:left;
+  margin:0px auto;
 }
 
 /* Button */
@@ -200,39 +288,46 @@ float_container {
 
 }
 
-.red_button {
-    display: inline-block;
-    background: #f5513c;
-    -webkit-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
-    -moz-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
-    box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-transition: all 0s 0;
-    -moz-transition: all 0s 0;
-    -o-transition: all 0s 0;
-    transition: all 0s 0;
-    padding:0;
-    border-color: #ec513c;
-    border-width: 1px;
-    border-style: solid;
-    color: #ffffff;
-    height:82px;
-    line-height:82px;
-    font-family:'LatoLightRegular';
-    color:white;
-    font-size:26px;
-    vertical-align: middle;
-    text-align: center;
-    width:218px;
+.button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0s 0;
+  -moz-transition: all 0s 0;
+  -o-transition: all 0s 0;
+  transition: all 0s 0;
+  padding:0;
+  vertical-align: middle;
+  text-align: center;
+  font-family:'LatoLightRegular';
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  border-color: white;
 }
 
+.button:active {
+  top:1px;
+  position:relative;
+}
+
+.red_button {
+  -webkit-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+  -moz-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+  box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+  background: #f5513c;
+  border-color: #ec513c;
+  height:82px;
+  line-height:82px;
+  color:white;
+  font-size:26px;
+  width:218px;
+}
+
+
 .red_button:active {
-    background: #ff6551;
-    border-color: #ed5e4b;
-    top:1px;
-    position:relative;
+  background: #ff6551;
+  border-color: #ed5e4b;
 }
 
 .button_image {
@@ -242,12 +337,97 @@ float_container {
   position: relative;
 }
 
-.sign_button_container {
+.button_container {
   text-align:center;
 }
+
+.middle_button_container {
+    width:722px;
+    display: inline-block;
+    text-align: center;
+}
+
+.gray_button {
+  -webkit-box-shadow: 0px 1px 0px 0px white inset, 0px 0px 0px 1px #e6e6e6;
+  -moz-box-shadow: 0px 1px 0px 0px white inset, 0px 0px 0px 1px #e6e6e6;
+  box-shadow: 0px 1px 0px 0px white inset, 0px 0px 0px 1px #e6e6e6;
+  background-color:none;
+  border-color: white;
+  height:50px;
+  line-height:50px;
+  color:#808285;
+  font-size:24px;
+  width:110px;
+}
+
+.gray_button:active {
+  background: gray;
+  border-color: gray;
+}
+
+
 
 /* Controls */
 
 .controls {
   margin-top:14px;
+}
+
+/* Signature Page */
+
+.signature_title {
+  padding-top:50px;
+  padding-bottom:15px;
+}
+
+.signature_sub_title {
+  line-height:31px;
+  padding-bottom:15px;
+}
+
+.sigWrapper {
+  clear: both;
+  height: 250px;
+}
+
+.signed .sigWrapper {
+  border: 0;
+}
+
+.pad {
+  position: relative;
+  border:dotted 1px #808285;
+}
+
+.pad.error {
+  border:dotted 1px #ED1C24;
+}
+
+.current .pad {
+  /**
+   * For cross browser compatibility, this should be an absolute URL
+   * In IE the cursor is relative to the HTML document
+   * In all other browsers the cursor is relative to the CSS file
+   *
+   * http://www.useragentman.com/blog/2011/12/21/cross-browser-css-cursor-images-in-depth/
+   */
+  cursor: url("../build/pen.cur"), crosshair;
+  /**
+   * IE will ignore this line because of the hotspot position
+   * Unfortunately we need this twice, because some browsers ignore the hotspot inside the .cur
+   */
+  cursor: url("pen.cur") 16 16, crosshair;
+}
+
+.clearButton {
+  -webkit-box-shadow: 0px 1px 0px 0px white inset, 0px 0px 0px 1px #e6e6e6;
+  -moz-box-shadow: 0px 1px 0px 0px white inset, 0px 0px 0px 1px #e6e6e6;
+  box-shadow: 0px 1px 0px 0px white inset, 0px 0px 0px 1px #e6e6e6;
+  font-size:24px;
+  color:#808285;
+  margin-left:57px;
+  margin-top:15px;
+  height:50px;
+  line-height:50px;
+  width:110px;
 }

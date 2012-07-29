@@ -1,8 +1,8 @@
 LiveSign::Application.routes.draw do
   
   resources :propositions, :only => [:show, :index] do
-    resources :signatures, :only => [:new, :create], :controller => 'propositions/signatures'
-    resources :users, :only => [:new, :create], :controller => 'propositions/users'
+    resources :signatures, :except => [:destroy], :controller => 'propositions/signatures'
+    resources :users, :except => [:destroy], :controller => 'propositions/users'
     resources :videos, :only => [:new, :create], :controller => 'propositions/videos'
   end
 

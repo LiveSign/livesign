@@ -42,10 +42,9 @@
 
 <% content_for :controls do %>
 
-  <div class="sign_button_container">
-    <button href="<%= new_proposition_user_path(@proposition.slug) %>" class="red_button">
-      Sign
-      <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
+  <div class="button_container">
+    <a href="<%= new_proposition_user_path(@proposition.slug) %>" class="red_button button">
+      Sign <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
     </a>
   </div>
 

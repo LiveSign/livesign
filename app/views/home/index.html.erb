@@ -9,17 +9,15 @@
 
     <div class="livesign_intro">
       Have people sign your proposition legally online with our state-of-the-art platform.
-      View our <%= link_to 'demo' %> or <%= link_to 'contact us' %> if you'd like to use LiveSign
+      View our <%= link_to 'demo', demo_path %> or <%= link_to 'contact us', "mailto:alainbloch@gmail.com" %> if you'd like to use LiveSign
       for your next world-changing campaign.
     </div>
 
     <div class="view_demo_container">
-      <div class="button_container">
-        <a href="<%= demo_url %>" class="red_button">
-          View Demo
-          <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
-        </a>
-      </div>
+      <a href="<%= demo_url %>" class="red_button button">
+        View Demo
+        <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
+      </a>
     </div>
 
     <div class="contact_us">

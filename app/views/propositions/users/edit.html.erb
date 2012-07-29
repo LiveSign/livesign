@@ -6,7 +6,7 @@
 
     <div class="form_container">
 
-      <%= form_for @user, :url => proposition_users_path(@proposition.slug), :html => {:class => "form"} do |f| %>
+      <%= form_for @user, :url => proposition_user_path(@proposition.slug, @user), :html => {:method => :put, :class => "form"} do |f| %>
         <%= render :partial => "form", :object => f %>
       <% end %>
 
@@ -17,6 +17,7 @@
 <% end %>
 
 <% content_for :controls do %>
+
   <div class="left_content">
     <%= link_to "Back", proposition_path(@proposition.slug), :class => "gray_button button"%>
   </div>

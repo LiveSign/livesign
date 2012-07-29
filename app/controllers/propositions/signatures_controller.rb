@@ -6,6 +6,14 @@ class Propositions::SignaturesController < Propositions::BaseController
     @signature = Signature.new
   end
 
+  def edit
+
+  end
+
+  def update
+
+  end
+
   def create
     @signature = Signature.new(user: @user, proposition: @proposition, data: params[:data])
     if @signature.save

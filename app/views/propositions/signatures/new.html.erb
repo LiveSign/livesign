@@ -1,6 +1,6 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag "jquery.signaturepad.css" %>
-  <%= javascript_include_tag "jquery.signaturepad"%>
+  
+  <%= javascript_include_tag "signature-pad/build/jquery.signaturepad.min.js"%>
 
   <script>
     $(document).ready(function() {
@@ -16,12 +16,44 @@
 
 <% end %>
 
-<%= form_for :signature, :url => proposition_signatures_path(@proposition.slug, :user_id => @user.id), :html => {:class => 'sigPad'} do |f| %>
-  <p class="drawItDesc">Draw your signature</p>
-  <div class="clearButton"><a href="#clear">Clear</a></div>
-  <div class="sig sigWrapper">
-    <canvas class="pad" width="198" height="55"></canvas>
-    <input type="hidden" name="data" class="data">
+<% content_for :main_content do %>
+
+
+    <%= form_for :signature, :url => proposition_signatures_path(@proposition.slug, :user_id => @user.id), :html => {:class => 'sigPad form'} do |f| %>
+
+      <div class="centered_container">
+
+        <h1 class="title signature_title">Sign Your Name</h1>
+        <h2 class="sub_title signature_sub_title">Use a finger or a mouse<br/>inside the box below.</h2>
+
+
+        <div class="sig sigWrapper">
+          <canvas class="pad <%= 'error' if @signature.errors[:data] %>" width="834px" height="250px"></canvas>
+          <input type="hidden" name="data" class="data">
+        </div>
+
+      </div>
+
+      <div class="clearButton button"><a href="#clear" class="grey">Clear</a></div>
+
+    <% end %>
+
+<% end %>
+
+<% content_for :controls do %>
+
+  <div class="left_content">
+    <%= link_to "Back", edit_proposition_user_path(@proposition.slug, @user), :class => "gray_button button"%>
   </div>
-  <button type="submit">Next</button>
+
+  <div class="middle_button_container">
+    <button href="#" class="red_button button" onClick="$('.form').submit();">
+      Next <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
+    </button>
+  </div>
+
+  <!-- <div class="right_content">
+    <a href="#" class="gray_button button">Cancel</a>
+  </div> -->
+
 <% end %>
