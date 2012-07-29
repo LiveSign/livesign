@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120729140730) do
+ActiveRecord::Schema.define(:version => 20120729163338) do
 
   create_table "propositions", :force => true do |t|
     t.text     "title"
@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(:version => 20120729140730) do
     t.integer  "user_id"
     t.integer  "proposition_id"
     t.text     "data"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "opentok_archive_id"
+    t.boolean  "verified",           :default => false, :null => false
   end
 
   create_table "users", :force => true do |t|
