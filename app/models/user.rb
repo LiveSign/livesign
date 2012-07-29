@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
 
   has_many :signatures
 
-  validates :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance, presence: true
+  validates :name, :email_address, :street_address, :city, :zip_code, :phone, :tos_acceptance, presence: true
 
-  attr_accessible :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance
+  attr_accessible :name, :email_address, :street_address, :city, :zip_code, :phone, :tos_acceptance
 
 end
