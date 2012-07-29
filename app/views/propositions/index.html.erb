@@ -1,0 +1,7 @@
+<h1 class="title">Propositions</h1>
+
+<ul class="proposition_list">
+  <%= render :partial => 'proposition', :collection => @propositions %>
+</ul>
+
+<%= will_paginate @propositions %>

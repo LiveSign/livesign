@@ -1,0 +1,12 @@
+<li class="proposition">
+  <h2><%= link_to proposition.title, proposition_path(proposition.slug) %></h2>
+  <div>
+    <%= truncate proposition.overview %>
+  </div>
+  <div>
+    <%= link_to "Sign", proposition_path(proposition.slug) %>
+  </div>
+  <div>
+    <%= pluralize proposition.signatures.count, "Signatures" %>
+  </div>
+</li>

@@ -1,14 +1,14 @@
-<% form_for @user, :url => proposition_users_path do |f| %>
+<%= form_for @user, :url => proposition_users_path(@proposition.slug) do |f| %>
   <%= f.text_field :name, :placeholder => "Name", :class => "name_field" %>
   <%= f.text_field :email_address, :placeholder => "Email", :class => "email_address_field" %>
   <%= f.text_field :street_address, :placeholder => "Street Address", :class => "street_address_field" %>
   <%= f.text_field :city, :placeholder => "City", :class => "city_field" %>
-  <%= f.text_field :zipcode, :placeholder => "Zipcode", :class => "zipcode_field" %>
+  <%= f.text_field :zip_code, :placeholder => "Zipcode", :class => "zipcode_field" %>
   <%= f.text_field :phone, :placeholder => "Phone", :class => "phone_field" %>
   <div class="tos_agreement_container">
-    <%= f.check_box :tos_agreement %> I agree to the <%= link_to "signature terms", %>
+    <%= f.check_box :tos_acceptance %> I accept the <%= link_to "signature terms", terms_of_service_path %>
   </div>
   <div class="next_button_container">
-    <%= submit "Next", :class => "next_button" %>
+    <%= submit_tag "Next", :class => "next_button" %>
   </div>
 <% end %>

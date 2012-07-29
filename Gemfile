@@ -11,9 +11,15 @@ gem 'jquery_mobile_rails'
 gem 'twilio-ruby'
 gem 'opentok'
 
-group :production do
-  gem 'pg'
-end
+gem 'haml'
+
+gem 'debugger'
+
+gem 'will_paginate'
+
+# group :production do
+#   gem 'pg'
+# end
 
 group :development do
   gem 'sqlite3'

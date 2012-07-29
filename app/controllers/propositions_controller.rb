@@ -1,13 +1,19 @@
 class PropositionsController < ApplicationController
 
-  before_filter :get_petition, :only => [:show]
+  before_filter :get_proposition, :only => [:show]
+
+  def index
+    @propositions = Proposition.paginate(:page => params[:page])
+  end
 
   def show
     # show.html.haml
   end
 
-  def get_petition
-    @petition = Petition.find_by_slug(params[:id])
+private
+
+  def get_proposition
+    @proposition = Proposition.find_by_slug(params[:id])
   end
 
 end
