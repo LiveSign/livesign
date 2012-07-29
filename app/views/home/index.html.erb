@@ -1,0 +1,35 @@
+
+<div class="left_content">
+
+  <div class="home_content">
+
+    <div class="livesign_logo_container">
+      <%= image_tag "LiveSign_logo.png" %>
+    </div>
+
+    <div class="livesign_intro">
+      Have people sign your proposition legally online with our state-of-the-art platform.
+      View our <%= link_to 'demo' %> or <%= link_to 'contact us' %> if you'd like to use LiveSign
+      for your next world-changing campaign.
+    </div>
+
+    <div class="view_demo_container">
+      <div class="button_container">
+        <a href="<%= demo_url %>" class="red_button">
+          View Demo
+          <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact_us">
+      <%= link_to "Contact Us", "mailto:alainbloch@gmail.com" %>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="right_content">
+  <%= image_tag "ipad_demo.png", :class=> "ipad_image" %>
+</div>

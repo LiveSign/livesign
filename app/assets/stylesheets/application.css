@@ -11,3 +11,243 @@
  *= require_self
  *= require_tree .
  */
+
+ /* Fonts */
+
+ @font-face {
+     font-family: 'LatoLightRegular';
+     src: url('/fonts/lato-light-webfont.eot');
+     src: url('/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+          url('/fonts/lato-light-webfont.woff') format('woff'),
+          url('/fonts/lato-light-webfont.ttf') format('truetype'),
+          url('/fonts/lato-light-webfont.svg#LatoLightRegular') format('svg');
+     font-weight: normal;
+     font-style: normal;
+
+ }
+
+ @font-face {
+     font-family: 'LatoRegular';
+     src: url('/fonts/lato-regular-webfont.eot');
+     src: url('/fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+          url('/fonts/lato-regular-webfont.woff') format('woff'),
+          url('/fonts/lato-regular-webfont.ttf') format('truetype'),
+          url('/fonts/lato-regular-webfont.svg#LatoRegular') format('svg');
+     font-weight: normal;
+     font-style: normal;
+
+ }
+
+ /* Global Styles */
+
+ body {
+   margin:0px;
+   padding:0px;
+   text-align:center;
+   background-color:#F5F5F5;
+ }
+
+ .main_content {
+   margin-top:36px;
+   background-color:white;
+   border-radius:4px;
+ }
+
+ .wrapper {
+   text-align:left;
+   margin:0px auto;
+   width:950px;
+ }
+
+ a {
+   text-decoration: none;
+   color:#2E87C8;
+ }
+
+/* Generic Styles */
+
+float_container {
+  clear:both;
+}
+
+.left_content {
+ float:left;
+ display:inline;
+}
+
+.right_content {
+ float:right;
+ display:inline;
+}
+
+.title {
+  color:#414042;
+  font-size:46pt;
+  font-family:'LatoLightRegular';
+}
+
+.sub_title {
+  color:#414042;
+  font-size:28pt;
+  font-family:'LatoLightRegular';
+}
+
+.sub_content {
+  color:#58595B;
+  font-size:18pt;
+  font-family:'LatoLightRegular';
+}
+
+/* Proposition Styles */
+
+.prop_title {
+  padding-top:85px;
+  padding-bottom:45px;
+}
+
+.prop_sub_title {
+  padding-bottom:20px;
+}
+
+
+.prop_content {
+  padding-bottom:40px;
+}
+
+/* Custom scroll bar */
+
+.custom_scroll_bar {
+  width: 850px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.custom_scroll_bar_handle {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 10px;
+  height: 15px;
+  background: #c00;
+  cursor: pointer;
+}
+
+.custom_scroll_bar_handle:hover {
+    background: #f00;
+}
+
+.custom_scroll_bar .native {
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.custom_scroll_bar.retained .native {
+    width: 600%;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+.custom_scroll_bar .content {
+  overflow: hidden;
+}
+
+.custom_scroll_bar.retained .content {
+    width: 850px;
+}
+
+/*  home page */
+
+.ipad_image {
+  padding-top:70px;
+  height:580px;
+}
+
+.livesign_logo_container {
+}
+
+.livesign_intro {
+  padding-top:32px;
+  font-family:"LatoLightRegular";
+  font-size:24px;
+  padding-bottom:32px;
+  width:500px;
+  line-height:31px;
+  color:#58595B;
+}
+
+.home_content {
+  text-align: left;
+  padding-left:94px;
+  padding-top:140px;
+}
+
+.view_demo_container {
+
+}
+
+.contact_us {
+  font-family:"LatoLightRegular";
+  font-size:24px;
+  margin-top:32px;
+}
+
+/* Button */
+
+
+.button_text {
+
+}
+
+.red_button {
+    display: inline-block;
+    background: #f5513c;
+    -webkit-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    -moz-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all 0s 0;
+    -moz-transition: all 0s 0;
+    -o-transition: all 0s 0;
+    transition: all 0s 0;
+    padding:0;
+    border-color: #ec513c;
+    border-width: 1px;
+    border-style: solid;
+    color: #ffffff;
+    height:82px;
+    line-height:82px;
+    font-family:'LatoLightRegular';
+    color:white;
+    font-size:26px;
+    vertical-align: middle;
+    text-align: center;
+    width:218px;
+}
+
+.red_button:active {
+    background: #ff6551;
+    border-color: #ed5e4b;
+    top:1px;
+    position:relative;
+}
+
+.button_image {
+  vertical-align: middle;
+  text-align: center;
+  top: -5px;
+  position: relative;
+}
+
+.sign_button_container {
+  text-align:center;
+}
+
+/* Controls */
+
+.controls {
+  margin-top:14px;
+}

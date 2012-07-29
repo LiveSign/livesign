@@ -1,15 +1,52 @@
-<h1 class="prop_title">
-  <%= @proposition.title %>
-</h1>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "jquery.signaturepad.css" %>
+  <%= javascript_include_tag "custom_scroll_bar.js" %>
+<% end %>
 
-<div class="prop_overview_container">
-  <%= @proposition.overview %>
-</div>
-  
-<div class="prop_full_container">
-  <%= @proposition.full %>
-</div>
+<% content_for :main_content do %>
+  <div class="prop_container">
 
-<div class="sign_button_container">
-  <%= sign_button %>
-</div>
+    <div class="custom_scroll_bar wants_content retained">
+
+      <div class="native">
+
+        <div class="content">
+
+          <h1 class="prop_title title">
+            <%= @proposition.title %>
+          </h1>
+
+          <div class="prop_creator_container">
+            <h2 class="sub_title prop_sub_title">Created By</h2>
+            <div class="sub_content prop_content"><%= @proposition.user.name %></div>
+          </div>
+
+          <div class="prop_overview_container">
+            <h2 class="sub_title prop_sub_title">Overview</h2>
+            <div class="sub_content prop_content"><%= @proposition.overview %></div>
+          </div>
+
+          <div class="prop_full_container">
+            <h2 class="sub_title prop_sub_title">Full Proposition</h2>
+            <div class="sub_content prop_content"><%= @proposition.full %></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+<% end %>
+
+<% content_for :controls do %>
+
+  <div class="sign_button_container">
+    <button href="<%= new_proposition_user_path(@proposition.slug) %>" class="red_button">
+      Sign
+      <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
+    </a>
+  </div>
+
+<% end %>
