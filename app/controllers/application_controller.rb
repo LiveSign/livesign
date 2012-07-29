@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   # @option opts [String] :metadata A string of metadata to be stored with the OpenTok session
   # @return [String] An OpenTok authentication token
   def opentok_token(opts = {})
-    token_options = { role: OpenTok::RoleConstants::PUBLISHER }
+    token_options = { role: OpenTok::RoleConstants::MODERATOR }
     token_options[:session_id] = opts[:session_id] || opentok_session
     token_options[:metadata] = opts[:metadata] if opts[:metadata]
 
