@@ -1,0 +1,62 @@
+div.custom_scroll_bar.retained div.native {
+  padding: 0 50px 0;
+}
+
+#signature_list {
+  width: 95%;
+  margin: 0 auto;
+  height: 600px;
+}
+
+#signature_list .header {
+  padding: 1em 0 0;
+  margin: 0;
+  border-bottom: solid 1px #efefef;
+}
+
+#signature_list .header h1 {
+  padding: 0 0 10px;
+  border-bottom: solid 1px #aaa;
+}
+
+#signature_list .signatures li {
+  clear: both;
+  padding-bottom: 1em;
+  border-bottom: solid 1px #999;
+}
+
+#signature_list .signature {
+  position: relative;
+  margin: 1em 0 0;
+}
+
+#signature_list .signature .archive {
+  float: left;
+  padding-right: 10px;
+}
+
+#signature_list .signature .user {
+  font-size: 16px;
+  line-height: 1.25em;
+}
+
+#signature_list .signature .metadata {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#signature_list .signature .verified,
+#signature_list .signature div.ui-slider.ui-slider-switch {
+  display: block;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 1em;
+}
+
+// jQuery mobile loaded successfully, HIDE!
+#signature_list .signature .verified.ui-slider-switch {
+  display: none;
+}
