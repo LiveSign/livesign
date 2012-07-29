@@ -1,0 +1,52 @@
+<% content_for(:head) do %>
+<%= javascript_include_tag "jquery.mobile" %>
+<%= stylesheet_link_tag "jquery.mobile" %>
+<% end %>
+
+<% content_for(:main_content) do %>
+<div class="prop_container">
+<div class="custom_scroll_bar wants_content retained">
+<div class="native">
+<div class="content">
+
+<form id="signature_list">
+	<div class="header">
+		<h1 class="title"><%= @proposition.title %></h1>
+	</div>
+
+	<ol class="signatures">
+		<% @signatures.each do |signature| %>
+		<li class="signature">
+			<div class="archive" <%= signature.opentok_archive_id? ? "id=archive-#{signature.opentok_archive_id}" : nil %>>
+				<img src="http://placehold.it/120x120"/>
+			</div>
+
+			<div class="user sub_content" id="user-<%= signature.user.id %>">
+				<%= signature.user.name %><br/>
+				<%= signature.user.street_address %><br/>
+				<%= signature.user.city %><br/>
+				<%= signature.user.zip_code %><br/>
+				<%= signature.user.phone %><br/>
+				<%= signature.user.email_address %>
+			</div>
+
+			<div class="metadata sub_content grey">
+				Signed <%= l(signature.created_at, format: "%b %e %Y %l:%M%p") %>
+			</div>
+
+			<%= select_tag(
+				"signatures[signature_attributes][#{signature.id}]",
+				options_for_select("Reject" => false, "Accept" => true),
+				:class => :verified, "data-role" => :slider) %>
+		</li>
+		<% end %>
+	</ol>
+
+	<div class="footer"></div>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+<% end %>
