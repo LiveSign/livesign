@@ -6,9 +6,6 @@ gem 'mobylette'
 gem 'hashie'
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
-gem 'jquery_mobile_rails'
-gem 'underscore-rails'
 
 gem 'twilio-ruby'
 gem 'opentok'
@@ -37,6 +34,9 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'compass-rails'
+  gem 'jquery-ui-rails'
+  gem 'jquery_mobile_rails'
+  gem 'underscore-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
