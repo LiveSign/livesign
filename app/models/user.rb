@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
   
   has_many :signatures
   
-  validate :name, :email_address, :street_address, :city, :state, :zipcode, :phone, :tos_acceptance, presence: true
+  validate :name, :email_address, :street_address, :city, :state, :zip_code, :phone, :tos_acceptance, presence: true
 end
