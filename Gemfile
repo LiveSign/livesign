@@ -14,7 +14,7 @@ gem 'haml'
 
 gem 'will_paginate'
 
-group :production do
+group :production, :development do
   gem 'pg'
 end
 
