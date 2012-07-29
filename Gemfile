@@ -6,6 +6,7 @@ gem 'mobylette'
 gem 'hashie'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'jquery_mobile_rails'
 gem 'underscore-rails'
 
