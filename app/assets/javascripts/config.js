@@ -5,6 +5,8 @@
 var Config = function (configuration) {
   if(typeof(configuration) === "string") {
     this.__config = JSON.parse(json_string);
+  } else if (typeof(configuration) == "object") {
+    this.__config = configuration;
   } else {
     this.__config = {};
   }
