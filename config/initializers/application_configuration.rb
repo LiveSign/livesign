@@ -15,5 +15,5 @@ config[Rails.env].each do |k,v|
     v
   end
 
-  Rails.configuration.send(key.to_sym, value)
+  Rails.configuration.send(key.to_sym=, value)
 end
