@@ -3,12 +3,36 @@
 <%= javascript_include_tag "propositions/videos" %>
 <% end %>
 
-<div class="video_wrapper">
-  <div id="recorder"></div>
-  <div id="player"></div>
+<% content_for(:main_content) do %>
 
-  <p id="video-controls">
-    <button id="record">Record</button>
-    <button id="play">Play</button>
-  </p>
-</div>
+  <div class="centered_container">
+
+    <h1 class="title signature_title">Take a video holding your ID</h1>
+    <h2 class="sub_title signature_sub_title">
+      Say the words, "My name is <%= @user.name %> and I vote yes to <%= @proposition.title %>"
+    </h2>
+
+    <div class="video_wrapper">
+      <div id="recorder"></div>
+      <div id="player"></div>
+    </div>
+
+    <%= form_tag proposition_videos_path(@proposition, :user_id => @user.id, :signature_id => @signature.id), :html => {:class => "form"} do %>
+      <%= hidden_field_tag :opentok_archive_id, :id => 'opentok_archive_id' %>
+    <% end %>
+
+  </div>
+
+<% end %>
+
+<% content_for :controls do %>
+  <div class="left_content">
+    <%= link_to "Back", new_proposition_signature_path(@proposition.slug, :user_id => @user.id), :class => "gray_button button"%>
+  </div>
+
+  <div class="middle_button_container">
+    <button href="#" class="red_button button" onClick="$('.form').submit();">
+      Next <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
+    </button>
+  </div>
+<% end %>

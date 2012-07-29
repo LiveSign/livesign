@@ -17,6 +17,7 @@ function Recorder (options) {
   };
 
   this.recorder = null;
+  this.archive = null;
   this.player = null;
 
   this.recorderManager = TB.initRecorderManager(this.apiConfig.apiKey);
@@ -42,7 +43,7 @@ Recorder.prototype.onRecordingStopped = function (event) {
 
 Recorder.prototype.onArchiveSaved = function (archiveEvent) {
   this.debug("onArchiveSaved", archiveEvent);
-  this.archive = archiveEvent.archives[0].archiveId;
+  this.archive = archiveEvent.archives[0];
 
   this.hideRecorder();
   this.showPlayer();
@@ -71,6 +72,12 @@ Recorder.prototype.onPlaybackStopped = function (event) {
   $("#" + this.playerId).trigger("opentok.playbackStopped");
 };
 
+// Persistance
+Recorder.prototype.saveOpenTokArchiveId = function (archive) {
+  this.debug('archive', archive);
+  $("#opentok_archive_id").attr("value", archive.archiveId);
+};
+
 // Interface
 Recorder.prototype.record = function () {
   if (this.recorder !== null) this.recorder.startRecording();
@@ -97,7 +104,7 @@ Recorder.prototype.hideRecorder = function () {
 };
 
 Recorder.prototype.showPlayer = function () {
-  this.player = this.recorderManager.displayPlayer(this.archive, this.apiConfig.apiToken, this.playerId, {
+  this.player = this.recorderManager.displayPlayer(this.archive.archiveId, this.apiConfig.apiToken, this.playerId, {
     width: this.width,
     height: this.height
   });

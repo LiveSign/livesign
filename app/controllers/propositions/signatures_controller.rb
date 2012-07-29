@@ -15,7 +15,8 @@ class Propositions::SignaturesController < Propositions::BaseController
   end
 
   def create
-    @signature = Signature.new(user: @user, proposition: @proposition, data: params[:data])
+    @signature = Signature.where(user_id: @user.id, proposition_id: @proposition.id).first || Signature.new(user: @user, proposition: @proposition)
+    @signature.data = params[:data]
     if @signature.save
       respond_to do |format|
         format.json { render :json, {:success => true} }

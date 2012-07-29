@@ -30,6 +30,8 @@ class Propositions::UsersController < Propositions::BaseController
   def create
     @user = User.new(params[:user])
     if @user.save
+      session[:user_id] = @user.id
+
       respond_to do |format|
         format.json { render :json, {:success => true} }
         format.html { redirect_to new_proposition_signature_path(@proposition.slug, :user_id => @user)}

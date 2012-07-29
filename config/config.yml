@@ -5,5 +5,5 @@ production:
 
 development:
   opentok:
-    api_key: <%= ENV['OPENTOK_API_KEY'] %>
-    api_secret: <%= ENV['OPENTOK_API_SECRET'] %>
+    api_key: 16879342
+    api_secret: f959310b810758f2af79a4c3bec665c1361b0b27

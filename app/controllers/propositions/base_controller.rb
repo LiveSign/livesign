@@ -9,7 +9,11 @@ private
   end
   
   def get_user
-    @user = User.find_by_id(params[:user_id])
+    if session[:user_id].blank?
+      @user = User.find_by_id(params[:user_id])
+    else
+      @user = User.find_by_id(session[:user_id])
+    end
   end
 
   def get_signature

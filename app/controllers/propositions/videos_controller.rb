@@ -10,8 +10,13 @@ class Propositions::VideosController < Propositions::BaseController
     @client_config[:opentok_session_id] = opentok_session
     @client_config[:opentok_auth_token] = opentok_token(session_id: @client_config[:opentok_session_id])
   end
-  
+
   def create
   end
   
+  private
+  def get_signature
+    @signature = Signature.find(params[:signature_id].to_i)
+  end
+
 end
