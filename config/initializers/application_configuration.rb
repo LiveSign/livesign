@@ -1,7 +1,7 @@
 if File.exist? Rails.root.join("config/config.yml")
   config = YAML.load_file Rails.root.join("config/config.yml")
 else
-  raise "Unable to load configuration variables from #{config}"
+  raise "Unable to load configuration variables from #{Rails.root.join("config/config.yml")}"
 end
 
 # For each environment, find all keys and assign them to Rails configuration methods.
