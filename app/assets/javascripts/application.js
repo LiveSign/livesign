@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.mobile
+//= require underscore
 //= require config
 
 // Initialize window.liveSign namespace and initialize liveSign.config

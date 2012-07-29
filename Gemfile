@@ -7,6 +7,7 @@ gem 'hashie'
 
 gem 'jquery-rails'
 gem 'jquery_mobile_rails'
+gem 'underscore-rails'
 
 gem 'twilio-ruby'
 gem 'opentok'
