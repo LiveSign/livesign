@@ -1,0 +1,4 @@
+development:
+  opentok:
+    api_key: 12345678
+    api_secret: super_secret_string
