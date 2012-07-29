@@ -1,8 +1,6 @@
 class HomeController < ApplicationController
 
-
   def index
-    # index.html.erb
   end
 
   def demo
