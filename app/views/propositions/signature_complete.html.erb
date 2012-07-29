@@ -12,13 +12,11 @@
       Consider sharing this proposition with your friends.
     </h2>
 
-    <!--
-      <div class="complete_button_container">
-        <a href="<%= proposition_path(@proposition.slug) %>" class="big_blue_button button">
-          Share
-        </a>
-      </div> 
-    -->
+    <div class="complete_button_container">
+      <a href="<%= proposition_path(@proposition.slug) %>" class="big_blue_button button">
+        Done <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
+      </a>
+    </div>
 
   </div>
 <% end %>
@@ -26,8 +24,9 @@
 <% content_for :controls do %>
 
   <div class="button_container">
-    <a href="<%= proposition_path(@proposition.slug) %>" class="big_gray_button button">
-      View <%= image_tag "arrow_gray.png", :class => "next_image button_image" %>
+    <br/>
+    <a href="<%= proposition_signatures_path(@proposition.slug) %>" class="big_gray_button button">
+      Dashboard
     </a>
   </div>
 
