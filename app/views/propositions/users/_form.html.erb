@@ -7,6 +7,6 @@
 <div class="tos_container">
   <%= form.check_box :tos_acceptance, :id => "tos_acceptance" %>
   <span class="input_text checkbox_label" onclick="$('#tos_acceptance').click();$(this).toggleClass('checked');">
-    I agree to the LiveView <%= link_to "terms of service", terms_of_service_path %>.
+    I agree to the LiveView <%= link_to "terms of service", terms_of_service_path(:proposition => @proposition.slug) %>.
   </span>
 </div>

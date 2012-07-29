@@ -1,9 +1,12 @@
 LiveSign::Application.routes.draw do
   
-  resources :propositions, :only => [:show, :index] do
+  resources :propositions, :only => [:show, :index, :signature_complete] do
     resources :signatures, :only => [:new, :create], :controller => 'propositions/signatures'
     resources :users, :except => [:index, :destroy], :controller => 'propositions/users'
-    resources :videos, :only => [:new, :create, :index], :controller => 'propositions/videos'
+    resources :videos, :only => [:new, :create], :controller => 'propositions/videos'
+    member do
+      get 'signature_complete'
+    end
   end
 
   get '/terms_of_service' => 'pages#terms_of_service', :as => :terms_of_service

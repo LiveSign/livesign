@@ -1,0 +1,54 @@
+<% content_for :head do %>
+  <%= javascript_include_tag "custom_scroll_bar.js" %>
+<% end %>
+
+<% content_for :main_content do %>
+
+<div class="prop_container">
+
+  <div class="custom_scroll_bar wants_content retained">
+
+    <div class="native">
+
+      <div class="content">
+
+        <h1 class="prop_title title">Terms of Service</h1>
+
+          <div class="sub_content prop_content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum nibh ut lectus feugiat volutpat vel a massa. Nullam lobortis lacinia tristique. Sed molestie, felis vitae tincidunt consectetur, eros risus pharetra felis, nec accumsan nisl erat vitae nibh. Integer quis nisi odio. Integer erat sem, dignissim vel varius sed, vulputate eu quam. Proin ac nibh a sapien ornare sodales eu vel tortor. Cras porttitor, est et sollicitudin iaculis, libero dui sollicitudin lorem, ac aliquet ligula dui eu tortor. Maecenas ipsum ipsum, vestibulum a rutrum id, malesuada non elit. Nam turpis quam, accumsan euismod faucibus nec, volutpat et lorem. Duis elementum lectus eget eros vehicula nec auctor quam sodales. Donec eros lacus, tempus at molestie vel, commodo ac nulla.
+          </div>
+
+          <div class="sub_content prop_content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum nibh ut lectus feugiat volutpat vel a massa. Nullam lobortis lacinia tristique. Sed molestie, felis vitae tincidunt consectetur, eros risus pharetra felis, nec accumsan nisl erat vitae nibh. Integer quis nisi odio. Integer erat sem, dignissim vel varius sed, vulputate eu quam. Proin ac nibh a sapien ornare sodales eu vel tortor. Cras porttitor, est et sollicitudin iaculis, libero dui sollicitudin lorem, ac aliquet ligula dui eu tortor. Maecenas ipsum ipsum, vestibulum a rutrum id, malesuada non elit. Nam turpis quam, accumsan euismod faucibus nec, volutpat et lorem. Duis elementum lectus eget eros vehicula nec auctor quam sodales. Donec eros lacus, tempus at molestie vel, commodo ac nulla.
+          </div>
+
+          <div class="sub_content prop_content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum nibh ut lectus feugiat volutpat vel a massa. Nullam lobortis lacinia tristique. Sed molestie, felis vitae tincidunt consectetur, eros risus pharetra felis, nec accumsan nisl erat vitae nibh. Integer quis nisi odio. Integer erat sem, dignissim vel varius sed, vulputate eu quam. Proin ac nibh a sapien ornare sodales eu vel tortor. Cras porttitor, est et sollicitudin iaculis, libero dui sollicitudin lorem, ac aliquet ligula dui eu tortor. Maecenas ipsum ipsum, vestibulum a rutrum id, malesuada non elit. Nam turpis quam, accumsan euismod faucibus nec, volutpat et lorem. Duis elementum lectus eget eros vehicula nec auctor quam sodales. Donec eros lacus, tempus at molestie vel, commodo ac nulla.
+          </div>
+
+          <div class="sub_content prop_content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum nibh ut lectus feugiat volutpat vel a massa. Nullam lobortis lacinia tristique. Sed molestie, felis vitae tincidunt consectetur, eros risus pharetra felis, nec accumsan nisl erat vitae nibh. Integer quis nisi odio. Integer erat sem, dignissim vel varius sed, vulputate eu quam. Proin ac nibh a sapien ornare sodales eu vel tortor. Cras porttitor, est et sollicitudin iaculis, libero dui sollicitudin lorem, ac aliquet ligula dui eu tortor. Maecenas ipsum ipsum, vestibulum a rutrum id, malesuada non elit. Nam turpis quam, accumsan euismod faucibus nec, volutpat et lorem. Duis elementum lectus eget eros vehicula nec auctor quam sodales. Donec eros lacus, tempus at molestie vel, commodo ac nulla.
+          </div>
+
+          <div class="sub_content prop_content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum nibh ut lectus feugiat volutpat vel a massa. Nullam lobortis lacinia tristique. Sed molestie, felis vitae tincidunt consectetur, eros risus pharetra felis, nec accumsan nisl erat vitae nibh. Integer quis nisi odio. Integer erat sem, dignissim vel varius sed, vulputate eu quam. Proin ac nibh a sapien ornare sodales eu vel tortor. Cras porttitor, est et sollicitudin iaculis, libero dui sollicitudin lorem, ac aliquet ligula dui eu tortor. Maecenas ipsum ipsum, vestibulum a rutrum id, malesuada non elit. Nam turpis quam, accumsan euismod faucibus nec, volutpat et lorem. Duis elementum lectus eget eros vehicula nec auctor quam sodales. Donec eros lacus, tempus at molestie vel, commodo ac nulla.
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<% end %>
+
+<% content_for :controls do %>
+
+  <% if @proposition %>
+    <div class="left_content">
+      <%= link_to "Back", new_proposition_user_path(@proposition.slug), :class => "gray_button button"%>
+    </div>
+  <% end %>
+
+<% end %>

@@ -6,14 +6,6 @@ class Propositions::SignaturesController < Propositions::BaseController
     @signature = Signature.new
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
   def create
     @signature = Signature.where(user_id: @user.id, proposition_id: @proposition.id).first || Signature.new(user: @user, proposition: @proposition)
     @signature.data = params[:data]

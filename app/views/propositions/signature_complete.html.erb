@@ -1,0 +1,32 @@
+<% content_for :head do %>
+  <%= javascript_include_tag "custom_scroll_bar.js" %>
+<% end %>
+
+<% content_for :main_content do %>
+  <div class="centered_container">
+
+    <h1 class="complete_title title">Thank you for your signature!</h1>
+
+    <h2 class="complete_sub_title sub_title">
+      You will receive a receipt in your email inbox.<br/>
+      Consider sharing this proposition with your friends.
+    </h2>
+
+    <div class="complete_button_container">
+      <a href="<%= proposition_path(@proposition.slug) %>" class="big_blue_button button">
+        Share
+      </a>
+    </div>
+
+  </div>
+<% end %>
+
+<% content_for :controls do %>
+
+  <div class="button_container">
+    <a href="<%= proposition_path(@proposition.slug) %>" class="big_gray_button button">
+      View <%= image_tag "arrow_gray.png", :class => "next_image button_image" %>
+    </a>
+  </div>
+
+<% end %>

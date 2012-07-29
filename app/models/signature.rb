@@ -4,5 +4,5 @@ class Signature < ActiveRecord::Base
   validates_uniqueness_of :user_id, :scope => [:proposition_id]
   validates_presence_of :user_id, :proposition_id
 
-  attr_accessible :user, :proposition, :data
+  attr_accessible :user, :proposition, :data, :opentok_archive_id
 end
