@@ -44,6 +44,7 @@ Recorder.prototype.onRecordingStopped = function (event) {
 Recorder.prototype.onArchiveSaved = function (archiveEvent) {
   this.debug("onArchiveSaved", archiveEvent);
   this.archive = archiveEvent.archives[0];
+  this.saveOpenTokArchiveId(this.archive);
 
   this.hideRecorder();
   this.showPlayer();
@@ -74,7 +75,7 @@ Recorder.prototype.onPlaybackStopped = function (event) {
 
 // Persistance
 Recorder.prototype.saveOpenTokArchiveId = function (archive) {
-  this.debug('archive', archive);
+  this.debug("saveOpenTokArchiveId", arguments);
   $("#opentok_archive_id").attr("value", archive.archiveId);
 };
 
@@ -129,6 +130,10 @@ var video = new Recorder({
 // On DOM ready
 $(function () {
   video.showRecorder();
+
+  $(".button.red_button").click(function () {
+    $(".form").submit();
+  });
 
   $("#" + video.recorderId).click(function () {
     if (video.recorder === null) return;

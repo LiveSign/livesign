@@ -17,8 +17,9 @@
       <div id="player"></div>
     </div>
 
-    <%= form_tag proposition_videos_path(@proposition, :user_id => @user.id, :signature_id => @signature.id), :html => {:class => "form"} do %>
-      <%= hidden_field_tag :opentok_archive_id, :id => 'opentok_archive_id' %>
+    <%= form_tag proposition_videos_path(@proposition.slug, :user_id => @user.id, :signature_id => @signature.id), :class => "form" do %>
+      <%= hidden_field_tag :proposition_id, :value => @proposition.slug %>
+      <%= hidden_field_tag :opentok_archive_id %>
     <% end %>
 
   </div>
@@ -27,11 +28,11 @@
 
 <% content_for :controls do %>
   <div class="left_content">
-    <%= link_to "Back", new_proposition_signature_path(@proposition.slug, :user_id => @user.id), :class => "gray_button button"%>
+    <%= link_to "Back", new_proposition_signature_path(:petition_id => @proposition.id, :user_id => @user.id), :class => "gray_button button"%>
   </div>
 
   <div class="middle_button_container">
-    <button href="#" class="red_button button" onClick="$('.form').submit();">
+    <button class="red_button button">
       Next <%= image_tag "arrow_white.png", :class => "next_image button_image" %>
     </button>
   </div>

@@ -1,6 +1,7 @@
 class Propositions::VideosController < Propositions::BaseController
 
-  before_filter :get_proposition, :get_user, :get_signature
+  before_filter :get_proposition, :get_user
+  before_filter :get_signature, except: :index
 
   def index
   end
@@ -12,6 +13,19 @@ class Propositions::VideosController < Propositions::BaseController
   end
 
   def create
+    if params[:opentok_archive_id].blank?
+      flash[:error] = "Unable to save recorded video"
+      redirect_to :back
+    end
+
+    @signature.opentok_archive_id = params[:opentok_archive_id]
+
+    if @signature.save
+      redirect_to proposition_videos_path(@proposition.slug)
+    else
+      flash[:error] = "Unable to save recorded video"
+      redirect_to :back
+    end
   end
   
   private

@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20120729140730) do
     t.text     "overview"
     t.text     "full"
     t.text     "slug"
+    t.text     "state"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120729140730) do
   create_table "signatures", :force => true do |t|
     t.integer  "user_id"
     t.integer  "proposition_id"
+    t.text     "data"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "opentok_archive_id"
