@@ -186,6 +186,7 @@ color:#808285;
 
 
 .prop_content {
+  white-space: pre-wrap;
   padding-bottom:40px;
 }
 
