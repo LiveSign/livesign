@@ -1,0 +1,2 @@
+module Propositions::UsersHelper
+end

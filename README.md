@@ -1,12 +1,12 @@
 livesign
 ========
 
-Hack For Change 2012: LiveSign is an application to put legally binding signatures on petitions within California.
+Hack For Change 2012: LiveSign is an application to allow users to create legally binding electronic signatures on propositions for California.
 
 Priorities
 ========
 
-1) Petition Page
+1) {roposition Page
 - title
 - description
 - creator
@@ -39,17 +39,23 @@ Priorities
 - Facebook
 - Contact book => SMS Messages (http://twilio.com)
 
-6) Log In:
-- Email sent to authorize account
+6) Log In/Sign up:
+- log in page
+- Email sent to authorize account and provide password
 - Settings page (password, address, name, privacy)
 
-7) Petition Creation:
+7) Proposition Creation:
 - Title
 - Description
 - Category?
 
-8) Petition Export:
+8) Proposition Export:
 - Export signatures as PDF documents
+
+9) Home page
+- Featured propositions
+- log in
+- sign up
 
 References
 =========

@@ -1,4 +1,13 @@
 LiveSign::Application.routes.draw do
+  
+  resources :propositions, :only => [:show] do
+    resources :signatures, :only => [:new, :create]
+    resources :users, :only => [:new, :create]
+    resources :videos, :only => [:new, :create]
+  end
+
+  match '/terms_of_service' => 'pages#terms_of_service', :as => :terms_of_service
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

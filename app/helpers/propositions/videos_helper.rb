@@ -1,0 +1,2 @@
+module Propositions::VideosHelper
+end

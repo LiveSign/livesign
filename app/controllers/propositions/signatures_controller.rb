@@ -1,4 +1,4 @@
-class Propositions::SignaturesController < ApplicationController
+class Propositions::SignaturesController < Propositions::BaseController
 
   def new
     @signature = Signature.new
@@ -11,10 +11,6 @@ class Propositions::SignaturesController < ApplicationController
     else
       # render
     end
-  end
-
-  def get_petition
-    @petition = Petition.find_by_slug(params[:petition_id])
   end
 
 end
