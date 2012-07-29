@@ -19,9 +19,9 @@ gem 'debugger'
 
 gem 'will_paginate'
 
-# group :production do
-#   gem 'pg'
-# end
+group :production do
+  gem 'pg'
+end
 
 group :development do
   gem 'sqlite3'
