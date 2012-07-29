@@ -397,6 +397,10 @@ color:#808285;
   border-color: #07355F;
 }
 
+.next_image {
+  padding-left:20px;
+}
+
 /* Controls */
 
 .controls {
