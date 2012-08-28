@@ -583,7 +583,9 @@ color:#808285;
     height:16px;
     margin:0 36px 20px 0;
     padding:0px;
-    position:relative; left:10px; top:15px;  
+    position:relative;
+    left:10px;
+    top:15px;
     background:#E6E7E8;
     border-width:1px;
     border-style:solid;
@@ -603,8 +605,6 @@ color:#808285;
     width:77%; /* Change to actual percentage */
     height:100%;
     background:#999;
-    
     background-size:18px 18px;
-    background-color: #ac0;   
-
+    background-color: #ac0;
 }

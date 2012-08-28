@@ -6,7 +6,7 @@ Hack For Change 2012: LiveSign is an application to allow users to create legall
 Priorities
 ========
 
-1) {roposition Page
+1) Proposition Page
 - title
 - description
 - creator
